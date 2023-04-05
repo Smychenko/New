@@ -34,13 +34,13 @@ button {
 	background: #FB9475;
 	border-radius: 24px;
 	border: none;
-	width: 203px;
-	height: 48px;
 	font-weight: 500px;
 	font-size: 14px;
 	text-align: center;
 	color: #FFF;
 	transition-duration: 0.4s;
+	display: inline-block;
+	padding: 17px 30px;
 }
 
 button:hover {
@@ -123,6 +123,9 @@ button:hover {
 	margin-bottom: 59px;
 }
 
+
+
+
 .girl {
 	position: absolute;
 	bottom: 0;
@@ -149,6 +152,9 @@ button:hover {
 	z-index: 0;
 }
 
+
+
+
 .social-icons {
 	display: flex;
 	flex-direction: column;
@@ -161,37 +167,46 @@ button:hover {
 	margin-bottom: 16px;
 }
 
-.description-inner {
+
+
+
+.section__title {
+	margin-top: 100px;
+	font-size: 48px;
+	font-weight: 700;
+	line-height: 60px;
+}
+.about__description {
 	display: flex;
 	justify-content: space-between;
 }
-
-.description-text {
+.about__description-text {
 	display: flex;
 	flex-direction: column;
-	margin-right: 90px;
+	margin-right: 60px;
 }
-
-.mir-krasoty {
+.about__description-text--text1 {
 	font-size: 20px;
 	font-weight: 400;
 	line-height: 32px;
 }
-
-.krasota {
+.about__description-text--text2 {
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 26px;
 }
-
-.description-video {
+.about__description-video {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	position: relative;
 	z-index: 0;
 }
-
+.about__description-video--img {
+	max-width: 445px;
+	max-height: 296px;
+	border-radius: 10px;
+}
 .button-play {
 	display: flex;
 	flex-direction: column;
@@ -199,13 +214,41 @@ button:hover {
 	position: absolute;
 	z-index: 1;
 }
-
-.play-text {
+.button-play__icon {
+	max-height: 61px;
+}
+.button-play__text {
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 26px;
 	color: #FFF;
 	margin: 0;
+}
+.advantages {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 100px;
+	gap: 30px;
+}
+.advantages__card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0 30px;
+}
+.advantages__img {
+	max-height: 48px;
+}
+.advantages__title {
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 22px;
+}
+.advantages__text {
+	text-align: center;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 22px;
 }
 
 .footer {
