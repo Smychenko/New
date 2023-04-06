@@ -1,15 +1,12 @@
 html {
 	height: 100%;
 }
-
 *, *:before, *:after {
 box-sizing: border-box
 }
-
 body {
 	font-family: "Montserrat", sans-serif;
 }
-
 h1 {
 	font-size: 48px;
 	line-height: 59px;
@@ -20,16 +17,13 @@ h2 {
 	font-weight: 700;
 	line-height: 60px;
 }
-
 a {
 	text-decoration: none;
 	color: #333;
 }
-
 a:hover {
 	color: #00BF78;
 }
-
 button {
 	background: #FB9475;
 	border-radius: 24px;
@@ -42,18 +36,15 @@ button {
 	display: inline-block;
 	padding: 17px 30px;
 }
-
 button:hover {
 	background-color: #f3a68e;
 }
-
 .header {
 	background-image: url(images/fon.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
-
 .header-top {
 	display: flex;
 	margin-bottom: 120px;
@@ -62,13 +53,11 @@ button:hover {
 	justify-content: space-between;
 	padding: 30px 0 0px;
 }
-
 .container {
 	margin: 0 auto;
 	position: relative;
 	max-width: 1110px;
 }
-
 .logo {
 	font-weight: 700;
 	font-size: 24px;
@@ -76,7 +65,6 @@ button:hover {
 	color: #333;	
 	text-decoration: none;
 }
-
 .navigation ul {
 	display: flex;
 	flex-basis: content;
@@ -84,27 +72,22 @@ button:hover {
 	font-weight: 500;
 	font-size: 14px;
 }
-
 .navigation li:not(:last-child) {
 	margin-right: 30px;
 }
-
 .phone-info {
 	text-align: right;
 	line-height: 14px;
 }
-
 .number {
 	font-weight: 500;
 	font-size: 18px;
 }
-
 .timework {
 	font-weight: 400;
 	font-size: 11px;
 	margin-top: 8px;
 }
-
 .header-content {
 	display: flex;
 	flex-direction: row;
@@ -112,34 +95,25 @@ button:hover {
 	padding-bottom: 80px;
 	position: relative;
 }
-
 .slogan {
 	width: 540px;
 }
-
-
 .ideal {
 	font-size: 20px;
 	margin-bottom: 59px;
 }
-
-
-
-
 .girl {
 	position: absolute;
 	bottom: 0;
 	right: 50px;
 	overflow: hidden;
 }
-
 .girl img {
 	display: block;
 	position: relative;
 	bottom: 0;
 	z-index: 1;
 }
-
 .girl::before {
 	content: "";
 	width: 472px;
@@ -151,10 +125,6 @@ button:hover {
 	right: 15px;
 	z-index: 0;
 }
-
-
-
-
 .social-icons {
 	display: flex;
 	flex-direction: column;
@@ -162,14 +132,9 @@ button:hover {
 	align-items: center;
 	list-style: none;
 }
-
 .social-icons li:not(:last-child) {
 	margin-bottom: 16px;
 }
-
-
-
-
 .section__title {
 	margin-top: 100px;
 	font-size: 48px;
@@ -250,14 +215,12 @@ button:hover {
 	font-size: 14px;
 	line-height: 22px;
 }
-
 .footer {
 	width: 100%;
 	margin: 0 auto;	
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
-
 .footer-inner {
 	display: flex;
 	justify-content: space-between;
@@ -266,18 +229,15 @@ button:hover {
 	font-size: 12px;
 	line-height: 16px;
 }
-
 .more {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 }
-
 .more a {
 	color: #278AFF;
 	text-decoration: underline;
 }
-
 .navigation__item {
 	font-size: 12px;
 }
