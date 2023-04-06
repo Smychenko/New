@@ -1,0 +1,243 @@
+html {
+	height: 100%;
+}
+*, *:before, *:after {
+box-sizing: border-box
+}
+body {
+	font-family: "Montserrat", sans-serif;
+}
+h1 {
+	font-size: 48px;
+	line-height: 59px;
+}
+h2 {
+	margin-top: 100px;
+	font-size: 48px;
+	font-weight: 700;
+	line-height: 60px;
+}
+a {
+	text-decoration: none;
+	color: #333;
+}
+a:hover {
+	color: #00BF78;
+}
+button {
+	background: #FB9475;
+	border-radius: 24px;
+	border: none;
+	font-weight: 500px;
+	font-size: 14px;
+	text-align: center;
+	color: #FFF;
+	transition-duration: 0.4s;
+	display: inline-block;
+	padding: 17px 30px;
+}
+button:hover {
+	background-color: #f3a68e;
+}
+.header {
+	background-image: url(images/fon.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.header-top {
+	display: flex;
+	margin-bottom: 120px;
+	max-width: 100%;
+	align-items: center;
+	justify-content: space-between;
+	padding: 30px 0 0px;
+}
+.container {
+	margin: 0 auto;
+	position: relative;
+	max-width: 1110px;
+}
+.logo {
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 28px;
+	color: #333;	
+	text-decoration: none;
+}
+.navigation ul {
+	display: flex;
+	flex-basis: content;
+	list-style: none;
+	font-weight: 500;
+	font-size: 14px;
+}
+.navigation li:not(:last-child) {
+	margin-right: 30px;
+}
+.phone-info {
+	text-align: right;
+	line-height: 14px;
+}
+.number {
+	font-weight: 500;
+	font-size: 18px;
+}
+.timework {
+	font-weight: 400;
+	font-size: 11px;
+	margin-top: 8px;
+}
+.header-content {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-bottom: 80px;
+	position: relative;
+}
+.slogan {
+	width: 540px;
+}
+.ideal {
+	font-size: 20px;
+	margin-bottom: 59px;
+}
+.girl {
+	position: absolute;
+	bottom: 0;
+	right: 50px;
+	overflow: hidden;
+}
+.girl img {
+	display: block;
+	position: relative;
+	bottom: 0;
+	z-index: 1;
+}
+.girl::before {
+	content: "";
+	width: 472px;
+	height: 472px;
+	border-radius: 50%;
+	background-color: #FB9475;
+	position: absolute;
+	bottom: -110px;
+	right: 15px;
+	z-index: 0;
+}
+.social-icons {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	list-style: none;
+}
+.social-icons li:not(:last-child) {
+	margin-bottom: 16px;
+}
+.section__title {
+	margin-top: 100px;
+	font-size: 48px;
+	font-weight: 700;
+	line-height: 60px;
+}
+.about__description {
+	display: flex;
+	justify-content: space-between;
+}
+.about__description-text {
+	display: flex;
+	flex-direction: column;
+	margin-right: 60px;
+}
+.about__description-text--text1 {
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 32px;
+}
+.about__description-text--text2 {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 26px;
+}
+.about__description-video {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	z-index: 0;
+}
+.about__description-video--img {
+	max-width: 445px;
+	max-height: 296px;
+	border-radius: 10px;
+}
+.button-play {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: absolute;
+	z-index: 1;
+}
+.button-play__icon {
+	max-height: 61px;
+}
+.button-play__text {
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 26px;
+	color: #FFF;
+	margin: 0;
+}
+.advantages {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 100px;
+	gap: 30px;
+}
+.advantages__card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0 30px;
+}
+.advantages__img {
+	max-height: 48px;
+}
+.advantages__title {
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 22px;
+}
+.advantages__text {
+	text-align: center;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 22px;
+}
+.footer {
+	width: 100%;
+	margin: 0 auto;	
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.footer-inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 16px;
+}
+.more {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.more a {
+	color: #278AFF;
+	text-decoration: underline;
+}
+.navigation__item {
+	font-size: 12px;
+}
