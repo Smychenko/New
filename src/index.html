@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,8 +8,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
-	<link rel="stylesheet" href="./main.css">
+	<link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
 	<div class="page">
@@ -42,9 +41,9 @@
 					</div>
 					<div class="social">
 						<ul class="social__item social--vertical">
-							<li class="social__item-icon"><a class="social__link" href="#"><img src="./images/vk.png" alt=""></a></li>
-							<li class="social__item-icon"><a class="social__link" href="#"><img src="./images/inst.png" alt=""></a></li>
-							<li class="social__item-icon"><a class="social__link" href="#"><img src="./images/you.png" alt=""></a></li>
+							<li class="social__item-icon"><a class="social__link" href="#"><img src="./images/vk.png" alt="vk"></a></li>
+							<li class="social__item-icon"><a class="social__link" href="#"><img src="./images/inst.png" alt="initial-scale"></a></li>
+							<li class="social__item-icon"><a class="social__link" href="#"><img src="./images/you.png" alt="you"></a></li>
 						</ul>
 					</div>
 				</div>
@@ -66,7 +65,7 @@
 								<img class="about__description-video about__description-video--img" src="./images/video.jpg" alt="video">
 								<div class="image-filter"></div>
 								<div class="button-play">
-									<a class="button-play__icon" href="#"><img src="./images/iconPlay 1.png" alt=""></a>
+									<a class="button-play__icon" href="#"><img src="./images/iconPlay 1.png" alt="play"></a>
 									<p class="button-play__text">Короткое видео о нас</p>
 								</div>
 							</div>
@@ -99,34 +98,44 @@
 					<div class="section__inner">
 						<div class="service-card">
 							<div class="service-card__info">
-								<img class="service-card__img" src="./images/manicure.jpg" alt="manicure">
+								<div class="service-card__box-img">
+									<img class="service-card__img" src="./images/manicure.jpg" alt="manicure">
+								</div>
 								<h3 class="service-card__title">Маникюр</h3>
 								<p class="service-card__descr">Аппаратный, комбинированный или классический.</p>
-								<button class="btn services__btn">Записаться</button>
+								<button class="btn service__btn">Записаться</button>
 							</div>
 							<div class="service-card__info">
-								<img class="service-card__img" src="./images/manicure.jpg" alt="manicure">
+								<div class="service-card__box-img">
+									<img class="service-card__img" src="./images/manicure.jpg" alt="manicure">
+								</div>
 								<h3 class="service-card__title">Покрытие гель-лак</h3>
 								<p class="service-card__descr">Гель-лак наносится в несколько слоев с использование базы и топа. Каждый слой полимеризуется в LED-лампе.</p>
-								<button class="btn services__btn">Записаться</button>
+								<button class="btn service__btn">Записаться</button>
 							</div>
 							<div class="service-card__info">
-								<img class="service-card__img" src="./images/manicure.jpg" alt="manicure">
+								<div class="service-card__box-img">
+									<img class="service-card__img" src="./images/manicure.jpg" alt="manicure">
+								</div>
 								<h3 class="service-card__title">Бразильский маникюр</h3>
 								<p class="service-card__descr">Выполняется в одноразовых перчатках наполненных увлажняющим лосьоном.</p>
-								<button class="btn services__btn">Записаться</button>
+								<button class="btn service__btn">Записаться</button>
 							</div>
 							<div class="service-card__info">
-								<img class="service-card__img" src="./images/manicure.jpg" alt="manicure">
+								<div class="service-card__box-img">
+									<img class="service-card__img" src="./images/manicure.jpg" alt="manicure">
+								</div>
 								<h3 class="service-card__title">Педикюр</h3>
 								<p class="service-card__descr">Аппаратный, комбинированный или классический.</p>
-								<button class="btn services__btn">Записаться</button>
+								<button class="btn service__btn">Записаться</button>
 							</div>
 							<div class="service-card__info">
-								<img class="service-card__img" src="./images/manicure.jpg" alt="manicure">
+								<div class="service-card__box-img">
+									<img class="service-card__img" src="./images/manicure.jpg" alt="manicure">
+								</div>
 								<h3 class="service-card__title">Парафинотерапия</h3>
 								<p class="service-card__descr">Благодаря этой процедуре увлажнение кожи увеличивается на 80%, также выводит токсины и укрепляет суставы.</p>
-								<button class="btn services__btn">Записаться</button>
+								<button class="btn service__btn">Записаться</button>
 							</div>
 						</div>
 					</div>
@@ -236,25 +245,53 @@
 						</div>
 						<div class="card">
 							<div class="masters-card">
-								<img class="masters-card__img" src="./images/krasnova.jpg" alt="foto">
+								<div class="masters-card__box-img">
+									<a class="masters-card__link" href="#">
+										<img class="masters-card__img" src="./images/krasnova.jpg" alt="foto">
+										<span class="masters-card__mask">
+											<p class="masters-card__mask-text">Записаться к мастеру</p>
+										</span>
+									</a>
+								</div>
 								<h4 class="masters-card__title">Краснова Ирина</h4>
 								<h5 class="masters-card__post">Мастер ногтевого сервиса</h5>
 								<h6 class="masters-card__exp">опыт работы 5 лет</h6>
 							</div>
 							<div class="masters-card">
-								<img class="masters-card__img" src="./images/kalilova.jpg" alt="foto">
+								<div class="masters-card__box-img">
+									<a class="masters-card__link" href="#">
+										<img class="masters-card__img" src="./images/kalilova.jpg" alt="foto">
+										<span class="masters-card__mask">
+											<p class="masters-card__mask-text">Записаться к мастеру</p>
+										</span>
+									</a>
+								</div>
 								<h4 class="masters-card__title">Калилова Жанна</h4>
 								<h5 class="masters-card__post">Визажист-стилист</h5>
 								<h6 class="masters-card__exp">опыт работы 5 лет</h6>
 							</div>
 							<div class="masters-card">
-								<img class="masters-card__img" src="./images/kiseleva.jpg" alt="foto">
+								<div class="masters-card__box-img">
+									<a class="masters-card__link" href="#">
+										<img class="masters-card__img" src="./images/kiseleva.jpg" alt="foto">
+										<span class="masters-card__mask">
+											<p class="masters-card__mask-text">Записаться к мастеру</p>
+										</span>
+									</a>
+								</div>
 								<h4 class="masters-card__title">Киселева Алина</h4>
 								<h5 class="masters-card__post">Парикмахер</h5>
 								<h6 class="masters-card__exp">опыт работы 5 лет</h6>
 							</div>
 							<div class="masters-card">
-								<img class="masters-card__img" src="./images/ivanova.jpg" alt="foto">
+								<div class="masters-card__box-img">
+									<a class="masters-card__link" href="#">
+										<img class="masters-card__img" src="./images/ivanova.jpg" alt="foto">
+										<span class="masters-card__mask">
+											<p class="masters-card__mask-text">Записаться к мастеру</p>
+										</span>
+									</a>
+								</div>
 								<h4 class="masters-card__title">Иванова Елена</h4>
 								<h5 class="masters-card__post">Мастер ногтевого сервиса</h5>
 								<h6 class="masters-card__exp">опыт работы 5 лет</h6>
