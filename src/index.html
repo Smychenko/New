@@ -13,7 +13,7 @@
 <body>
 	<div class="page">
 		<header class="header">
-			<div class="container">
+			<div class="container header__container">
 				<div class="header__top">
 					<a class="logo" href="#">Мир красоты</a>
 					<nav class="navigation header__navigation">
@@ -40,7 +40,7 @@
 						<img class="header__girl-img" src="./images/girl.png" alt="Girl">
 					</div>
 					<div class="social">
-						<ul class="social__item social--vertical">
+						<ul class="social__item social_vertical">
 							<li class="social__item-icon"><a class="social__link" href="#"><img src="./images/vk.png" alt="vk"></a></li>
 							<li class="social__item-icon"><a class="social__link" href="#"><img src="./images/inst.png" alt="initial-scale"></a></li>
 							<li class="social__item-icon"><a class="social__link" href="#"><img src="./images/you.png" alt="you"></a></li>
@@ -58,11 +58,11 @@
 					<div class="section__inner">
 						<div class="about__description">
 							<div class="about__description-text">
-								<p class="about__description-text about__description-text--text1">Мир красоты - это уютный салон в самом центре города. Здесь работают профессиональные визажисты, стилисты и мастера татуажа</p>
-								<p class="about__description-text about__description-text--text2">Красота и хороший уход никогда не выходят из моды. Мы приглашаем Вас в место, где гармония обретает форму, а внешность становится отражением внутреннего мира. Новая жизнь начинается с небольших изменений. Мы помогаем нашим клиентам воплотить их индивидуальность во внешнем облике. Мы создаем стиль – вместе с Вами и для Вас.</p>
+								<p class="about__description-text about__description-text_bigtext">Мир красоты - это уютный салон в самом центре города. Здесь работают профессиональные визажисты, стилисты и мастера татуажа</p>
+								<p class="about__description-text about__description-text_smalltext">Красота и хороший уход никогда не выходят из моды. Мы приглашаем Вас в место, где гармония обретает форму, а внешность становится отражением внутреннего мира. Новая жизнь начинается с небольших изменений. Мы помогаем нашим клиентам воплотить их индивидуальность во внешнем облике. Мы создаем стиль – вместе с Вами и для Вас.</p>
 							</div>
 							<div class="about__description-video">
-								<img class="about__description-video about__description-video--img" src="./images/video.jpg" alt="video">
+								<img class="about__description-video about__description-video_img" src="./images/video.jpg" alt="video">
 								<div class="image-filter"></div>
 								<div class="button-play">
 									<a class="button-play__icon" href="#"><img src="./images/iconPlay 1.png" alt="play"></a>
@@ -234,7 +234,7 @@
 					<div>
 				</div>
 			</section> <!-- prices -->
-			<section id="masters" class="section section__masters section--gray">
+			<section id="masters" class="section section__masters section_gray">
 				<div class="container">
 					<div class="section__header">
 						<h2 class="section__title">Мастера</h2>
@@ -300,13 +300,140 @@
 					</div>
 				</div>
 			</section> <!-- masters -->
+
+			<section id="portfolio" class="section section__portfolio">
+				<div class="container">
+					<div class="section__header section__header_inline ">
+						<h2 class="section__title">Наши работы</h2>
+						<div class="section__actions">
+							<button class="button__arrow"><img src="./images/prev.png" alt="arrow"></button>
+							<button class="button__arrow"><img src="./images/next.png" alt="arrow"></button>
+						</div>
+					</div>
+					<div class="section__inner">
+						<div class="portfolio">
+							<div class="portfolio-card">
+								<div class="portfolio-card__box-img">
+									<a class="portfolio-card__link" href="#">
+										<img class="portfolio-card__img" src="./images/portfolio1.jpg" alt="face">
+										<span class="portfolio-card__mask">
+											<img class="portfolio-card__mask-img" src="./images/search 1.png" alt="search">
+											<p class="portfolio-card__mask-text">Увеличить</p>
+										</span>
+									</a>
+								</div>
+							</div>
+							<div class="portfolio-card">
+								<div class="portfolio-card__box-img">
+									<a class="portfolio-card__link" href="#">
+										<img class="portfolio-card__img" src="./images/portfolio2.jpg" alt="girl">
+										<span class="portfolio-card__mask">
+											<img class="portfolio-card__mask-img" src="./images/search 1.png" alt="search">
+											<p class="portfolio-card__mask-text">Увеличить</p>
+										</span>
+									</a>
+								</div>
+							</div>
+							<div class="portfolio-card">
+								<div class="portfolio-card__box-img">
+									<a class="portfolio-card__link" href="#">
+										<img class="portfolio-card__img" src="./images/portfolio3.jpg" alt="finger">
+										<span class="portfolio-card__mask">
+											<img class="portfolio-card__mask-img" src="./images/search 1.png" alt="search">
+											<p class="portfolio-card__mask-text">Увеличить</p>
+										</span>
+									</a>
+								</div>
+							</div>
+							<div class="portfolio-card">
+								<div class="portfolio-card__box-img">
+									<a class="portfolio-card__link" href="#">
+										<img class="portfolio-card__img" src="./images/portfolio4.jpg" alt="hair">
+										<span class="portfolio-card__mask">
+											<img class="portfolio-card__mask-img" src="./images/search 1.png" alt="search">
+											<p class="portfolio-card__mask-text">Увеличить</p>
+										</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section> <!-- portfolio -->
+
+			<section id="brends" class="section">
+				<div class="container">
+					<div class="section__header">
+						<p class="section-brends__title">Бренды, которые мы используем в работе</p>
+					</div>
+					<div class="section__inner">
+						<div class="brends">
+							<div class="brends-box">
+								<img class="brends__img" src="./images/wella.png" alt="wella">
+							</div>
+							<div class="brends-box">
+								<img class="brends__img" src="./images/schwarz.png" alt="schwarz">
+							</div>
+							<div class="brends-box">
+								<img class="brends__img" src="./images/tigi.png" alt="tigi">
+							</div>
+							<div class="brends-box">
+								<img class="brends__img" src="./images/londa.png" alt="londa">
+							</div>
+							<div class="brends-box">
+								<img class="brends__img" src="./images/nioxin.png" alt="nioxin">
+							</div>
+						</div>
+					</div>
+				</div>
+			</section> <!-- brends -->
+
+			<section id="contacts" class="section section_gray">
+				<div class="container">
+					<div class="section__inner contacts">
+						<div class="contacts__text">
+							<h2 class="section__title">Контакты</h2>
+							<p class="contacts__adress">Томск, проспект Ленина, дом 13</p>
+							<p class="contacts__tel">8 (499) 686-17-62</p>
+							<a class="contacts__mail_blue" href="#">info@more-krasoty.ru</a>
+							<p class="contacts__soc">Мы в социальных сетях</p>
+							<div class="social">
+								<ul class="social__item social_horizontal">
+									<li class="social__item-icon"><a class="social__link" href="#"><img src="./images/vk.png" alt="vk"></a></li>
+									<li class="social__item-icon"><a class="social__link" href="#"><img src="./images/inst.png" alt="initial-scale"></a></li>
+									<li class="social__item-icon"><a class="social__link" href="#"><img src="./images/you.png" alt="you"></a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="form">
+							<div class="form__input-container">
+								<h4 class="form__title">Быстрая запись</h4>
+								<h5 class="form__subtitle">Наш менеджер перезвонит в течение нескольких минут, уточнит подробности и согласует время.</h5>
+								<form action="#" method="get" enctype="multipart/form-data">
+									<div class="form__input">
+										<input type="text" id="name" class="form__input_name" placeholder="Ваше имя" required>
+									</div>
+									<div class="form__input">
+										<input type="tel" id="tel" class="form__input_tel" placeholder="+7 (___) ___-__-__" required>
+									</div>
+									<div class="form__input">
+										<button type="submit" class=" btn form__button">Записаться</button>
+									</div>
+								</form>
+								<h6 class="form__areement">Нажимая на кнопку вы соглашаетесь с <a class="agreement__link_blue" href="#">обработкой персональных данных</a></h6>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section> <!-- contacts -->
 		</main>
 		<footer class="footer">
 			<div class="container">
 				<div class="footer-inner">
 					<div class="more">
 						<p class="more__text">© 2020 «Море красоты»</p>
-						<a class="footer-inner--blue" href="#">Политика конфиденциальности</a>
+						<a class="footer-inner_blue" href="#">Политика конфиденциальности</a>
 					</div>
 					<nav class="navigation footer__nav">
 						<ul class="navigation__list">
