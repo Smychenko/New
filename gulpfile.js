@@ -1,61 +1,92 @@
-const { src, dest, series, watch, parallel } = require('gulp');
-const sass = require('gulp-sass')(require('sass'));
+const preprocessor = 'sass';
+const { src, dest, parallel, series, watch } = require('gulp');
 const browserSync = require('browser-sync').create();
+const concat = require('gulp-concat');
+const sass = require('gulp-sass')(require('sass'));
+const autoprefixer = require('gulp-autoprefixer');
+const cleancss = require('gulp-clean-css');
+const imagecomp = require('compress-images');
 const clean = require('gulp-clean');
-const postcss = require('gulp-postcss');
-const autoprefixer = require('autoprefixer');
-const cssnano = require('cssnano');
 const sourcemaps = require('gulp-sourcemaps');
+const webpackStream = require('webpack-stream');
+const rename = require('gulp-rename');
 
-// Таск компиляции SASS в CSS
-function buildSass() {
-    return src('src/scss/**/*.scss')
-        .pipe(sourcemaps.init())
-        .pipe(sass({ includePaths: ['./node_modules'] }).on('error', sass.logError))
-        .pipe(
-            postcss([
-                autoprefixer({
-                    grid: true,
-                    overrideBrowserslist: ['last 2 versions']
-                }),
-                cssnano()
-            ])
-        )
-        .pipe(sourcemaps.write())
-        .pipe(dest('src/css'))
-        .pipe(dest('dist/css'))
-        .pipe(browserSync.stream());
-}
-// Таск работы с html файлами
-function buildHtml() {
-    return src('src/**/*.html')
-        .pipe(dest('dist'))
-        .pipe(browserSync.stream());
-}
 
-// Таск копирования статичных файлов
-function copy() {
-    return src(['src/images/**/*.*'], { base: 'src' }).pipe(dest('dist'));
-}
-
-// Таск очистки dist
-function cleanDist() {
-    return src('dist', { allowEmpty: true }).pipe(clean());
-}
-
-// Таск отслеживания изменения файлов
-function serve() {
-    watch('src/scss/**/*.scss', buildSass);
-    watch('src/**/*.html', buildHtml);
-}
-
-// Создание дев-сервера
-function createDevServer() {
+function browsersync() {
     browserSync.init({
-        server: 'src',
-        notify: false
+        server: { baseDir: 'src/' },
+        notify: false,
+        online: true
     })
 }
 
-exports.build = series(cleanDist, buildSass, buildHtml, copy);
-exports.default = series(buildSass, parallel(createDevServer, serve));
+function styles() {
+    return src('src/' + preprocessor + '/main.scss')
+        .pipe(sourcemaps.init())
+        .pipe(sass({ includePaths: ['./node_modules'] }).on('error', sass.logError))
+        .pipe(eval(preprocessor)())
+        .pipe(concat('app.min.css'))
+        .pipe(autoprefixer({ overrideBrowserslist: ['last 2 versions'], grid: true }))
+        .pipe(cleancss({ level: { 1: { specialComments: 0 } } }))
+        .pipe(sourcemaps.write())
+        .pipe(dest('src/css/'))
+        .pipe(browserSync.stream())
+}
+
+async function images() {
+    imagecomp(
+        "src/images/src/**/*",
+        "src/images/dest/",
+        { compress_force: false, statistic: true, autoupdate: true }, false,
+        { jpg: { engine: "mozjpeg", command: ["-quality", "75"] } },
+        { png: { engine: "pngquant", command: ["--quality=75-100", "-o"] } },
+        { svg: { engine: "svgo", command: "--multipass" } },
+        { gif: { engine: "gifsicle", command: ["--colors", "64", "--use-col=web"] } },
+        function (err, completed) {
+            if (completed === true) {
+                browserSync.reload()
+            }
+        }
+    )
+}
+
+function cleanimg() {
+    return src('src/images/dest/', { allowEmpty: true }).pipe(clean())
+}
+
+function buildcopy() {
+    return src([
+        'src/css/**/*.min.css',
+        'src/fonts/**/*',
+        'src/images/dest/**/*',
+        'src/**/*.html',
+    ], { base: 'src' })
+        .pipe(dest('dist'))
+}
+
+function cleandist() {
+    return src('dist', { allowEmpty: true }).pipe(clean())
+}
+
+function startwatch() {
+    watch(['src/js/**/*.js', '!src/js/**/*.min.js'], buildJs);
+    watch('src/**/' + preprocessor + '/**/*', styles);
+    watch('src/**/*.html').on('change', browserSync.reload);
+    watch('src/images/src/**/*', images);
+}
+
+function buildJs() {
+    return src('src/js/index.js')
+        .pipe(webpackStream(require('./webpack.config')))
+        .pipe(rename('main.min.js'))
+        .pipe(dest('src/js'))
+        .pipe(dest('dist/js'))
+        .pipe(browserSync.stream());
+}
+
+exports.images = images;
+exports.cleanimg = cleanimg;
+
+
+exports.build = series(cleandist, styles, buildJs, images, buildcopy);
+exports.default = series([styles, buildJs], parallel(browsersync, startwatch));

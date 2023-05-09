@@ -3,9 +3,12 @@
 @import 'media';
 
 .header {
-	background-image: url(/src/images/fon.jpg);
+	background-image: url(src/images/fon.jpg);
 	background-repeat: repeat;
 
+	&__container {
+		padding-bottom: 0;
+	}
 	&__top {
 		display: flex;
 		margin-bottom: 100px;
